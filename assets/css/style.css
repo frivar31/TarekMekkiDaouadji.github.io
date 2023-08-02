@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 .tarek { /* pour positionner le div du contact*/
     position: relative;
     left: 100px;
-    top: -60px;
+
 }
 .contact-acceuil { /* pour positionner le div du contact de lacceuil*/
     position: relative;
@@ -1835,7 +1835,7 @@ button {
 }
 
 .button-arounder {
-    font-size: 2rem;
+    font-size: 1.3rem;
     background: hsl(218, 55%, 29%);
     color: hsl(190deg, 10%, 95%);
     box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
@@ -1860,3 +1860,9 @@ button {
         border-bottom-left-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
     }
+#up{
+    position:relative;
+    top:7px;
+    left:380px;
+    font-size:20px;
+}
