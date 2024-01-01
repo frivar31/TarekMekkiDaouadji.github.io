@@ -1363,7 +1363,7 @@ section {
 .pricing .box h4 span {
   color: #bababa;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 300 ;
 }
 
 .pricing .box ul {
@@ -2107,7 +2107,7 @@ textarea.form-control {
 #up{
     position:relative;
     top:7px;
-    left:110px;
+    left:190px;
     font-size:20px;
 }
 #mapp{
