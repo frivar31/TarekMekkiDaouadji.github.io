@@ -42,8 +42,11 @@
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-flex align-items-center; ">
         <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <p id="up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b> </p>
+            <div class="marquee-container">
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+
             </div>
         </div>
     </section>
@@ -53,7 +56,7 @@
     <header id="header" class="d-flex align-items-center" style="background: url('bg10.jpg');">
         <div class="container d-flex align-items-center ">
 
-            <a class="logo2"><img src="assets/img/logo5.png" width="240" height="240"></a>
+            <a class="logo2"><img src="assets/img/logo5.png"width="150" height="150"></a>
 
             <nav id="navbar" class="navbar centric">
                 <ul>
@@ -69,7 +72,6 @@
 
         </div>
     </header><!-- End Header -->
-
     <!-- ======= Hero Section ======= -->
     <section>
         <video id="vid" autoplay muted loop>
@@ -89,6 +91,24 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentUrl = window.location.href;
+
+            // Remove trailing slashes to match the URL format in the navigation links
+            currentUrl = currentUrl.replace(/\/$/, "");
+
+            // Get all the navigation links
+            var navLinks = document.querySelectorAll("#navbar ul li a");
+
+            // Loop through each link and add the "active" class if the href matches the current URL
+            navLinks.forEach(function (link) {
+                if (link.href == currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 
 </body>
 

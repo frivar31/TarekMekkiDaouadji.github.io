@@ -31,36 +31,40 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
-<body  style="width: 100%; background: url('bg10.jpg'); ">
+<body style="width: 100%; background: url('bg10.jpg'); ">
 
     <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="d-flex align-items-center">
+    <section id="topbar" class="d-flex align-items-center; ">
         <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <p id="up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b> </p>
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
+            <div class="marquee-container">
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+                <p class="marquee up"><b>M.MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
+
             </div>
         </div>
     </section>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center" style="background: url('bg10.jpg')">
+    <header id="header" class="d-flex align-items-center" style="background: url('bg10.jpg');">
         <div class="container d-flex align-items-center ">
-            <a class="logo2"><img src="assets/img/logo5.png" width="240" height="240"></a>
+
+            <a class="logo2"><img src="assets/img/logo5.png"  width="150" height="150"></a>
+
             <nav id="navbar" class="navbar centric">
                 <ul>
                     <li><a style="color: #002b80" class="nav-link" href="index.html">Accueil </a></li>
                     <li><a style="color: #002b80" class="nav-link " href="Cabinet.html">Cabinet</a></li>
-                    <li><a style="color: #002b80"class="nav-link " href="Expertise.html">Expertise</a></li>
-                    <li><a style="color: #002b80"class="nav-link " href="Services.html">Services</a></li>
-                    <li><a style="color: #002b80"class="nav-link " href="Contact.html">Contact</a></li>
+                    <li><a style="color: #002b80" class="nav-link " href="Expertise.html">Expertise</a></li>
+                    <li><a style="color: #002b80" class="nav-link " href="Services.html">Services</a></li>
+                    <li><a style="color: #002b80" class="nav-link " href="Contact.html">Contact</a></li>
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
+            </nav><!-- .navbar -->
 
         </div>
-    </header>
+    </header><!-- End Header -->
 
 
     <main id="main" class="clearfix " style="background-color:transparent">
@@ -69,12 +73,12 @@
 
         <div class="fusion-builder-row fusion-row">
             <div class="fusion-title title fusion-title-4 sep-underline sep-solid fusion-title-text fusion-title-size-two" style="border-bottom-color:#093479;margin-top:0px;margin-right:0px;margin-bottom:31px;margin-left:0px;">
-                <h3 style="margin: 0; color: #002b80; ">La direction du cabinet</h3>
+                <h3 style="margin: 0; color: #002b80; ">La direction</h3>
             </div>
         </div>
         <div class="fusion-builder-row fusion-row">
-            <h5 style="text-align: justify; color: #002b80"> La direction du cabinet est assurée par M.MEKKI DAOUADJI licencié en sciences économiques option sciences financières de l’université d’Oran. Il est expert-comptable, diplômé et commissaire aux comptes agrée par l’État depuis 1998.</h5>
-            <h5 style="text-align: justify; color: #002b80 ">Au cours des vingt-cinq dernières années, MEKKI DAOUADJI a acquis une vaste expérience au niveau national qu'international et a développé une expertise en audit financier, en consultation et en ingénierie financière. Il a animé plusieurs séminaires et cours de formation dans les domaines de l’audit, la comptabilité financière et de la fiscalité.</h5>
+            <h5 style="text-align: justify; color: #002b80"> La direction du cabinet est assurée par <b>MAHIEDINE MEKKI DAOUADJI</b> licencié en sciences économiques option sciences financières de l’université d’Oran en 1987. Il est expert-comptable, diplômé et commissaire aux comptes agrée par l’État depuis 1998.</h5>
+            <h5 style="text-align: justify; color: #002b80 "> <b>MEKKI DAOUADJI</b> a acquis une vaste expérience au niveau national qu'international et a développé une expertise en audit financier, en consultation et en ingénierie financière. Il a animé plusieurs séminaires et cours de formation dans les domaines de l’audit, la comptabilité financière et de la fiscalité.</h5>
             <h5 style="text-align: justify; color: #002b80">Son expertise en fiscalité touche particulièrement, la consolidation fiscale des groupes, l’optimisation et la planification fiscale des entreprises.</h5>
         </div>
 
@@ -239,6 +243,23 @@
 
 
     </main>
- </body>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentUrl = window.location.href;
 
+        // Remove trailing slashes to match the URL format in the navigation links
+        currentUrl = currentUrl.replace(/\/$/, "");
+
+        // Get all the navigation links
+        var navLinks = document.querySelectorAll("#navbar ul li a");
+
+        // Loop through each link and add the "active" class if the href matches the current URL
+        navLinks.forEach(function (link) {
+            if (link.href == currentUrl) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
 </html>
