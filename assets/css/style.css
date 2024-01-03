@@ -1825,8 +1825,8 @@ section {
 .buttons-container {
     width: 100%;
     position: relative;
-    left : 800px;
-    bottom: 330px;
+    left : 850px;
+    bottom: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2126,12 +2126,12 @@ textarea.form-control {
 
 .marquee {
     flex: 0 0 auto;
-    margin-right: 20px; /* Adjust the spacing between duplicated lines */
-    animation: marquee 15s linear infinite alternate;
+    margin-right: 100px; /* Adjust the spacing between duplicated lines */
+    animation: marquee 12s linear infinite alternate;
 }
 
 @keyframes marquee {
-    0% {
+    100% {
         transform: translateX(100%);
     }
 
