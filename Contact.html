@@ -84,7 +84,8 @@
                                     <div id="form-message-success" class="mb-4">
                                         votre message a etait envoyer, merci
                                     </div>
-                                    <form method="POST" action="traitement_formulaire.php" id="contactForm" name="contactForm" class="contactForm">
+                                    <form action="https://api.web3forms.com/submit" method="POST">
+                                        <input type="hidden" name="access_key" value="c020aaa7-e635-4b4f-82a4-7a31d97d517e">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -212,7 +213,7 @@
             });
         });
     </script>
-
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>
