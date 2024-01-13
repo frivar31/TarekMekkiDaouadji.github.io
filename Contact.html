@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -35,6 +36,7 @@
 
 </head>
 
+
 <body style="width: 100%; background: url('bg10.jpg'); overflow-y: hidden; overflow-x: hidden;">
 
     <!-- ======= Top Bar ======= -->
@@ -44,7 +46,6 @@
                 <p class="marquee up"><b>MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
                 <p class="marquee up"><b>MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
                 <p class="marquee up"><b>MEKKI DAOUADJI - Expert Comptable et Commissaire aux Comptes</b></p>
-
             </div>
         </div>
     </section>
@@ -83,7 +84,7 @@
                                     <div id="form-message-success" class="mb-4">
                                         votre message a etait envoyer, merci
                                     </div>
-                                    <form method="post" action="traitement_formulaire.php" id="contactForm" name="contactForm" class="contactForm">
+                                    <form method="POST" action="traitement_formulaire.php" id="contactForm" name="contactForm" class="contactForm">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -123,6 +124,7 @@
                                             </div>
 
                                         </div>
+                                        <input type="hidden" name="csrf_token" value="<?php echo md5(uniqid(rand(), TRUE)); ?>">
                                     </form>
                                 </div>
 
