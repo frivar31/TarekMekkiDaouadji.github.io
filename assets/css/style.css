@@ -221,9 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 110px;
 }
 
-.scrolled-offset {
-  margin-top: 70px;
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -422,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 55px;
   right: 15px;
-  bottom: 15px;
+  bottom: 520px;
   left: 15px;
   padding: 10px 0;
   background-color: #fff;
