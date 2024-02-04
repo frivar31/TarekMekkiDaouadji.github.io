@@ -424,6 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   padding: 10px 0;
   background-color: #fff;
+
   overflow-y: auto;
   transition: 0.3s;
 }
