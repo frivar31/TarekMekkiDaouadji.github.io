@@ -98,6 +98,61 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+.side-container {
+    position: fixed;
+    top: 20px;
+    width: 100px; /* Ajustez selon la largeur de vos logos */
+    height: 100%;
+    overflow: hidden;
+    margin :20px;
+}
+
+.left-side {
+    left: 0;
+}
+
+.right-side {
+    right: 0;
+}
+
+
+/* Media query pour masquer les conteneurs de logos quand la largeur de la fenêtre est de 1400px ou moins */
+@media (max-width: 1400px) {
+    .side-container {
+        display: none;
+    }
+}
+.marquee-vertical {
+    display: flex;
+    flex-direction: column;
+    animation: marquee-vertical 15s linear infinite;
+}
+
+    .marquee-vertical img {
+        margin: 15px 0; /* Ajustez l'espacement vertical entre les logos */
+    }
+
+@keyframes marquee-vertical {
+    from {
+        transform: translateY(-100%); /* Augmenter pour un déplacement plus long vers le haut */
+    }
+    to {
+        transform: translateY(120%); /* Augmenter pour un déplacement plus long vers le bas */
+    }
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
