@@ -540,43 +540,66 @@
         </div>
     </main>
     <div class="marquee-container">
-        <div class="marquee-horizontal marquee up">
-            <img src="assets/img/image.jpg ">
-            <img src="assets/img/image2.jpg">
-            <img src="assets/img/image2.png">
-            <img src="assets/img/image3.png">
-            <img src="assets/img/image4.jpg">
-            <img src="assets/img/image5.jpg">
-            <img src="assets/img/image6.png">
-            <img src="assets/img/image7.png">
-            <img src="assets/img/image8.jpg">
-            <img src="assets/img/image9.jpg">
-            <img src="assets/img/image10.png">
-            <img src="assets/img/image11.png">
-            <img src="assets/img/image12.png">
-            <img src="assets/img/image13.png">
-            <img src="assets/img/image14.jpg">
-            <img src="assets/img/image15.png">
-            <img src="assets/img/image16.jpg">
-            <img src="assets/img/image17.jpg">
-            <img src="assets/img/image18.png">
+        <div class="marquee-horizontal marquee up" id="marquee">
+            <!-- Images will be dynamically added here -->
         </div>
     </div>
     <script src="assets/js/main.js"></script>
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = [
+                'assets/img/image.jpg',
+                'assets/img/image2.jpg',
+                'assets/img/image3.jpg',
+                'assets/img/image4.jpg',
+                'assets/img/image5.jpg',
+                'assets/img/image6.png',
+                'assets/img/image7.png',
+                'assets/img/image8.jpg',
+                'assets/img/image9.jpg',
+                'assets/img/image10.png',
+                'assets/img/image11.png',
+                'assets/img/image12.png',
+                'assets/img/image13.png',
+                'assets/img/image14.jpg',
+                'assets/img/image15.png',
+                'assets/img/image16.jpg',
+                'assets/img/image17.jpg',
+                'assets/img/image18.png'
+            ];
 
-    <!--pour savoir quel page est ouverte navbar-->
+            const marqueeContainer = document.getElementById('marquee');
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.setAttribute('data-src', src);
+                img.classList.add('lazy');
+                marqueeContainer.appendChild(img);
+            });
+
+            const lazyLoad = () => {
+                const lazyImages = document.querySelectorAll('img.lazy');
+                lazyImages.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0 && getComputedStyle(img).display !== 'none') {
+                        img.src = img.getAttribute('data-src');
+                        img.classList.remove('lazy');
+                    }
+                });
+            };
+
+            document.addEventListener('scroll', lazyLoad);
+            window.addEventListener('resize', lazyLoad);
+            window.addEventListener('orientationchange', lazyLoad);
+            lazyLoad();
+        });
+    </script>
+
+    <!-- Script to mark active page in navbar -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var currentUrl = window.location.href;
-
-            // Remove trailing slashes to match the URL format in the navigation links
             currentUrl = currentUrl.replace(/\/$/, "");
-
-            // Get all the navigation links
             var navLinks = document.querySelectorAll("#navbar ul li a");
 
-            // Loop through each link and add the "active" class if the href matches the current URL
             navLinks.forEach(function (link) {
                 if (link.href == currentUrl) {
                     link.classList.add("active");
@@ -584,4 +607,5 @@
             });
         });
     </script>
+</body>
 </html>

@@ -100,15 +100,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-    .marquee-horizontal img {
-        display: inline-block;
-        margin-left: 5px; 
-        width: 100px; 
-        height: 100px;
-        margin-bottom:20px;
-    }
-
-
 
 /*--------------------------------------------------------------
 /*--------------------------------------------------------------
@@ -2134,25 +2125,42 @@ textarea.form-control {
     overflow: hidden;
 }
 
+.marquee-horizontal img {
+  display: inline-block;
+  margin-left: 5px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
 .marquee-container {
-    display: flex;
+  display: flex;
 }
 
 .marquee {
-    flex: 0 0 auto;
-    margin-right: 100px; /* Adjust the spacing between duplicated lines */
-    animation: marquee 12s linear infinite alternate;
+  flex: 0 0 auto;
+  margin-right: 100px; /* Adjust the spacing between duplicated lines */
+  animation: marquee 12s linear infinite alternate;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
+
+.marquee-horizontal img {
+  display: inline-block;
+  margin-left: 5px; 
+  width: 100px; 
+  height: 100px;
+  margin-bottom:20px;
+}
+
+
 #mapp{
     height:528px;
     width: 800px;
