@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mekki Daouadji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        input, textarea, select {
+            width: 100%; padding: 15px; background: rgba(0,0,0,0.3); border: 1px solid var(--border);
+            color: #fff; border-radius: 8px; margin-bottom: 20px; font-family: inherit;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button" tabindex="0">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo5.png" alt="Mekki Daouadji Logo">
+                </a>
+
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <a href="index.html">Accueil</a>
+                        <a href="Cabinet.html">Cabinet</a>
+                        <a href="Expertise.html">Expertise</a>
+                        <a href="Services.html">Services</a>
+                    </div>
+
+                    <div class="nav-actions">
+                        <a href="ecole.html" class="btn-academy">
+                            <i class="fa-solid fa-graduation-cap"></i> MD Academy
+                        </a>
+                        <a href="Contact.html" class="btn-contact active">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <section class="section-padding reveal">
+            <div class="container">
+                <div class="text-center mb-40">
+                    <span class="text-accent">Nous joindre</span>
+                    <h1>Contactez-nous</h1>
+                </div>
+
+                <div class="grid-2">
+                    <div class="service-card">
+                        <h3>Envoyez un message</h3>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="c020aaa7-e635-4b4f-82a4-7a31d97d517e">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <input type="text" name="name" placeholder="Nom" required>
+                                <input type="text" name="entreprise" placeholder="Entreprise">
+                            </div>
+                            <select name="sujet" required>
+                                <option value="" disabled selected>Service concerné...</option>
+                                <option value="Cabinet">Cabinet (Audit/Compta)</option>
+                                <option value="Ecole">École MD Academy</option>
+                            </select>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" rows="4" placeholder="Message..."></textarea>
+                            <button type="submit" class="btn-contact" style="width: 100%; border:none; cursor:pointer;">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="grid-2 mb-40">
+                            <div class="service-card text-center" style="padding: 20px;">
+                                <i class="fa-solid fa-phone text-accent" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                                <p>(+213) 661 41 58 25</p>
+                            </div>
+                            <div class="service-card text-center" style="padding: 20px;">
+                                <i class="fa-solid fa-envelope text-accent" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                                <p>m.mekki@mekkidaouadji.com</p>
+                            </div>
+                        </div>
+                        <div class="service-card" style="padding: 0; overflow: hidden; height: 300px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1631642201637!2d-0.5900792237411543!3d35.697602229073624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e62bc06d06343%3A0xcf2016a259e84229!2sAUDEC!5e0!3m2!1sfr!2sca!4v1703961824592!5m2!1sfr!2sca" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script defer src="main.js"></script>
+</body>
+</html>

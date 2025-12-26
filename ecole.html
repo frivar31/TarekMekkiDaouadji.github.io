@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Accent spécifique pour l'école */
+        .text-academy { color: var(--academy) !important; }
+        .icon-academy { color: var(--academy) !important; font-size: 2rem; margin-bottom: 20px; }
+        .bg-academy { background: var(--academy) !important; border-color: var(--academy) !important; color: white !important; }
+        .service-card:hover { border-color: var(--academy); box-shadow: 0 0 30px rgba(99, 102, 241, 0.2); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button" tabindex="0">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo5.png" alt="Mekki Daouadji Logo">
+                </a>
+
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <a href="index.html" class="active">Accueil</a>
+                        <a href="Cabinet.html">Cabinet</a>
+                        <a href="Expertise.html">Expertise</a>
+                        <a href="Services.html">Services</a>
+                    </div>
+
+                    <div class="nav-actions">
+                        <a href="ecole.html" class="btn-academy">
+                            <i class="fa-solid fa-graduation-cap"></i> MD Academy
+                        </a>
+                        <a href="Contact.html" class="btn-contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0;">
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: -1;">
+                <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(99,102,241,0.25), rgba(14,17,22,0.85)); z-index: 1;"></div>
+                <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="assets/videos/background2.mp4" type="video/mp4">
+                    <img src="assets/img/bg10.jpg" alt="Background MD Academy">
+                </video>
+            </div>
+
+            <div class="container text-center reveal" style="position: relative; z-index: 2;">
+                <span style="display:inline-block; padding: 6px 12px; background: rgba(99, 102, 241, 0.10); color: var(--academy); border: 1px solid rgba(99, 102, 241, 0.30); border-radius: 50px; margin-bottom: 20px; font-weight: 700;">MD Academy</span>
+                <h1 style="margin-bottom: 20px;">Devenez l'expert <br>que le marché s'arrache.</h1>
+                <p style="max-width: 600px; margin: 0 auto 40px; color: #cbd5e1;">Formations certifiantes en Comptabilité, Audit et Fiscalité, conçues par des professionnels pour des professionnels.</p>
+                <a href="Contact.html" class="btn-contact bg-academy">Demander le catalogue</a>
+            </div>
+        </section>
+
+        <section class="section-padding reveal">
+            <div class="container">
+                <h2 class="text-center mb-40">Nos Parcours</h2>
+                <div class="grid-3">
+                    <div class="service-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+                            <i class="fa-solid fa-calculator icon-academy" style="margin:0;"></i>
+                            <span style="font-size: 0.75rem; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; color: var(--text-muted);">Initial</span>
+                        </div>
+                        <h3>Fondamentaux Comptables</h3>
+                        <p>Maîtrisez les bases : cycle d'exploitation, écritures d'inventaire, préparation du bilan.</p>
+                        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted);">
+                            <i class="fa-regular fa-clock text-academy"></i> 80 Heures
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+                            <i class="fa-solid fa-scale-balanced icon-academy" style="margin:0;"></i>
+                            <span style="font-size: 0.75rem; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; color: var(--text-muted);">Avancé</span>
+                        </div>
+                        <h3>Audit Légal & Contractuel</h3>
+                        <p>Normes ISA, techniques de contrôle, rôle du Commissaire aux Comptes.</p>
+                        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted);">
+                            <i class="fa-regular fa-clock text-academy"></i> 120 Heures
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+                            <i class="fa-solid fa-file-invoice-dollar icon-academy" style="margin:0;"></i>
+                            <span style="font-size: 0.75rem; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; color: var(--text-muted);">Expert</span>
+                        </div>
+                        <h3>Fiscalité Approfondie</h3>
+                        <p>TVA, IBS, IRG, optimisation fiscale et gestion des contentieux.</p>
+                        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted);">
+                            <i class="fa-regular fa-clock text-academy"></i> 60 Heures
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding reveal" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <span class="text-academy" style="font-weight: 700;">ENTREPRISES</span>
+                        <h2>Formation Sur Mesure</h2>
+                        <p>Vos équipes ont des besoins spécifiques ? Nous construisons le programme adapté à votre secteur et vos objectifs.</p>
+                        <ul style="margin-bottom: 30px; list-style: none;">
+                            <li style="margin-bottom: 15px;"><i class="fa-solid fa-check text-academy"></i> Audit préalable des compétences</li>
+                            <li style="margin-bottom: 15px;"><i class="fa-solid fa-check text-academy"></i> Programme personnalisé</li>
+                            <li><i class="fa-solid fa-check text-academy"></i> Flexibilité (Intra/Inter-entreprise)</li>
+                        </ul>
+                        <a href="Contact.html" class="btn-contact" style="background: transparent; border: 1px solid var(--border); color: #fff;">Contacter le pôle Formation</a>
+                    </div>
+                    <div class="service-card" style="justify-content: center; align-items: center; text-align: center;">
+                        <i class="fa-solid fa-graduation-cap icon-academy" style="font-size: 5rem;"></i>
+                        <h3 class="text-academy">Transfert de Compétences</h3>
+                        <p>Assurez la montée en puissance de vos collaborateurs grâce à l'expertise de nos formateurs seniors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script defer src="main.js"></script>
+</body>
+</html>

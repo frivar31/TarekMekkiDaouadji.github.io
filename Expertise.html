@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Secteurs | Mekki Daouadji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sector-card {
+            position: relative; height: 350px; overflow: hidden; border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .sector-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            transition: transform 0.8s ease;
+        }
+        .sector-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(14,17,22,0.85), rgba(14,17,22,0.25));
+            padding: 30px; display: flex; flex-direction: column; justify-content: flex-end;
+            transition: 0.3s;
+        }
+        .sector-card:hover .sector-bg { transform: scale(1.1); }
+        .sector-card:hover .sector-overlay { background: linear-gradient(to top, rgba(14,17,22,0.92), rgba(14,17,22,0.45)); }
+        
+        .sector-desc { 
+            font-size: 0.95rem; margin-top: 15px; color: var(--text-muted); 
+            transform: translateY(20px); opacity: 0; transition: 0.4s ease;
+        }
+        .sector-card:hover .sector-desc { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button" tabindex="0">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo5.png" alt="Mekki Daouadji Logo">
+                </a>
+
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <a href="index.html">Accueil</a>
+                        <a href="Cabinet.html">Cabinet</a>
+                        <a href="Expertise.html" class="active">Expertise</a>
+                        <a href="Services.html">Services</a>
+                    </div>
+
+                    <div class="nav-actions">
+                        <a href="ecole.html" class="btn-academy">
+                            <i class="fa-solid fa-graduation-cap"></i> MD Academy
+                        </a>
+                        <a href="Contact.html" class="btn-contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <section class="section-padding reveal">
+            <div class="container">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
+                    <span class="text-accent">Savoir-faire</span>
+                    <h1>Secteurs d'Activité</h1>
+                    <p>Forte de plus de 30 ans d’expérience, notre équipe multidisciplinaire maîtrise les spécificités de chaque secteur.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/1.png');"></div>
+                        <div class="sector-overlay">
+                            <h3>Industrie</h3>
+                            <div class="sector-desc">Sidérurgie, agroalimentaire... Équilibre entre coûts de production et rentabilité.</div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/2.jpg');"></div>
+                        <div class="sector-overlay">
+                            <h3>BTP & Immobilier</h3>
+                            <div class="sector-desc">Travaux publics, bâtiment. Accompagnement stratégique et gestion de projets complexes.</div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/3.jpg');"></div>
+                        <div class="sector-overlay">
+                            <h3>Commerce</h3>
+                            <div class="sector-desc">Solutions innovantes pour la gestion financière nationale et internationale.</div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/4.jpg');"></div>
+                        <div class="sector-overlay">
+                            <h3>Services</h3>
+                            <div class="sector-desc">Tourisme, IT, Transport. Maîtrise des réglementations spécifiques pour optimiser votre performance.</div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/5.jpg');"></div>
+                        <div class="sector-overlay">
+                            <h3>Secteur Sportif</h3>
+                            <div class="sector-desc">Gestion des associations et clubs face aux exigences réglementaires et impératifs financiers.</div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-bg" style="background-image: url('assets/img/6.jpg');"></div>
+                        <div class="sector-overlay">
+                            <h3>Secteur Public</h3>
+                            <div class="sector-desc">EPIC, EPST, œuvres sociales. Fiabilité et transparence.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script defer src="main.js"></script>
+</body>
+</html>
